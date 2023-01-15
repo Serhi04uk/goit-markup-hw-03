@@ -10,8 +10,6 @@
     --accent-color-upgrade-seven: #2E2F42;
 
     --card-set-gap: 24px;
-    --card-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -123,8 +121,10 @@ color: var(--accent-color-upgrade-three);
 .main-hero {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 188px 473px 188px 473px;
+    padding: 188px 0 188px 0;
+    
 }
 
 .link-header {
@@ -140,9 +140,16 @@ color: var(--accent-color-upgrade-seven);
 }
 
 .menu-link:hover,
-.menu-link:focus {
-color: var(--accent-color-upgrade-two);
+.menu-link:focus,
+.menu-link-visited:visited {
+    color: #4D5AE5;;
 ;
+}
+
+
+.section{
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 /* CONTACT! */
@@ -183,7 +190,7 @@ font-size: 56px;
 line-height: 1.07;
 color: var(--accent-color-upgrade-one);
 width: 494px;
-height: 120px;
+
 
 }
 
@@ -201,13 +208,13 @@ height: 120px;
     background: var(--accent-color-upgrade-three);
     padding: 16px 32px 16px 32px;
     border-radius: 4px;
-    border: 1px solid var(--accent-color-upgrade-three);
+    border: 1px solid var(--accent-color-upgrade-six);
     
 }
 
 .modal-button:hover,
 .modal-button:focus {
-    background: var(--accent-color-upgrade-three);
+    background: var(--accent-color-upgrade-six);
 }
 
 
@@ -216,8 +223,7 @@ height: 120px;
 .section-main-one {
     display: flex;
     align-items: center;
-    margin-top: 120px;
-    margin-bottom: 120px;
+   
 }
 
 .paragraf-main {
@@ -230,8 +236,8 @@ height: 120px;
 
 /* Section TWO */
 
-.section-two {
-    margin-bottom: 120px;
+.section-dva {
+    padding-top: 0;
 }
 
 .photo-list-two {
@@ -258,7 +264,7 @@ line-height: 1.2;
 }
 
 .main-title-group {
-    font-weight: 500;
+font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 display: flex;
@@ -299,14 +305,13 @@ line-height: 1.11;
 .section-tree {
     display: flex;
     align-items: center;
-    padding-bottom: 120px;
 }
 
 .section-tree-word {
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
-    padding-top: 120px;
+    
 }
 
 .section-tree-boarder {
@@ -317,9 +322,8 @@ margin-right: 24px;
 }
 
 .section-tree-paragraf {
-    margin: 32px 16px 32px 16px;
-    display: flex;
-    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 /* FOOTER! */
@@ -327,7 +331,8 @@ margin-right: 24px;
 .parag-footer {
 line-height: 1.5;
 color: var(--accent-color-upgrade-four);
-padding-top: 16px;
+margin-top: 16px;
+width: 264px;
 }
 
 
@@ -339,7 +344,7 @@ padding-top: 16px;
 .footer-main {
     padding-top: 100px;
     padding-bottom: 100px;
-    width: 264px;
+    
 }
 
 
@@ -357,7 +362,7 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 color: var(--accent-color-upgrade-fife);
-margin-left: 16px;
+
 
 }
 
@@ -366,7 +371,6 @@ font-family: 'Roboto', sans-serif;
 line-height: 1.5;
 color: var(--accent-color-upgrade-two);
 margin-top: 8px;
-margin-left: 16px;
 }
 
 /* BUTTON! */
@@ -388,6 +392,9 @@ background: var(--accent-color-upgrade);
 .btn:focus {
     background: var(--accent-color-upgrade-six);;
     color: var(--accent-color-upgrade-one);
+    border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
    
 }
 
@@ -395,8 +402,8 @@ background: var(--accent-color-upgrade);
 .list-button {
     display: flex;
     justify-content: center;
-    margin-bottom: 72px;
-    margin-top: 96px;
+    padding-bottom: 72px;
+    
 }
 
 /* Main */
@@ -414,31 +421,35 @@ background: var(--accent-color-upgrade);
 
 
 .card-set > .portfolio-item {
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    flex-basis: calc(100% / 3 var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
     margin-bottom: var(--card-set-gap);
 }
 
 .card-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-  
-  .card-text {
-    margin-top: 8px;
-  }
+    padding: 32px 16px 32px 16px;
 
-  .card {
-    box-shadow: var(--card-shadow);
-    width: 360px;
-  }
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: gainsboro;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: gainsboro;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: gainsboro;
+}
+  
 
   .header-boarder {
-    box-shadow: var(--card-shadow);
-    
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: gainsboro;
   }
 
-  .own-section {
-    margin-bottom: 120px;
+  .section-portfolio {
+    padding-top: 96px;
   }
