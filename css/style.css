@@ -142,8 +142,7 @@ color: var(--accent-color-upgrade-seven);
 .menu-link:hover,
 .menu-link:focus,
 .menu-link-visited:visited {
-    color: #4D5AE5;;
-;
+    color: #4D5AE5;
 }
 
 
