@@ -135,14 +135,22 @@ color: var(--accent-color-upgrade-three);
 font-weight: 500;
 line-height: 1.5;
 color: var(--accent-color-upgrade-seven);
-
-
+height: 52px
 }
 
 .menu-link:hover,
 .menu-link:focus,
 .menu-link-visited:visited {
     color: #4D5AE5;
+}
+
+.menu-link-visited::after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 4px;
+    background: #404BBF;
+    border-radius: 2px;
 }
 
 
